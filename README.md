@@ -1,55 +1,55 @@
-<<<<<<< HEAD
-# Welcome to your Expo app 👋
+# TODO LIST APP - React Native con Expo
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplicación móvil desarrollada con **React Native y Expo** que permite gestionar tareas pendientes de forma sencilla, organizada y con persistencia local.
 
-## Get started
+---
 
-1. Install dependencies
+## Características principales
 
-   ```bash
-   npm install
-   ```
+- Agregar tareas
+- Editar tareas
+- Eliminar tareas
+- Cambiar estado (Pendiente / Completada)
+- Contador de tareas pendientes
+- Orden automático (pendientes arriba)
+- Persistencia de datos con AsyncStorage
+- Interfaz moderna (modo oscuro)
+- Footer con información del autor
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## Tecnologías utilizadas
 
-In the output, you'll find options to open the app in a
+- React Native
+- Expo
+- React Navigation (Stack)
+- AsyncStorage
+- JavaScript (ES6)
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Instalación paso a paso
 
-## Get a fresh project
-
-When you're ready, run:
+### 1. Clonar repositorio
 
 ```bash
-npm run reset-project
-```
+git clone https://github.com/AnaLucia134/Examen2multiplataforma.git
+cd Examen2multiplataforma
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. Instalar dependencias del proyecto
+npm install
 
-## Learn more
+3. Instalar librerías necesarias
+Navegación
+npx expo install @react-navigation/native
+npx expo install @react-navigation/native-stack
 
-To learn more about developing your project with Expo, look at the following resources:
+Dependencias requeridas por navegación
+npx expo install react-native-screens
+npx expo install react-native-safe-area-context
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Persistencia
+npx expo install @react-native-async-storage/async-storage
 
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
-=======
-# Examen2multiplataforma
-Examen2multiplataforma
->>>>>>> ffc9d60c1ef177644ef0c32ee92b24050b557e85
+4. Ejecutar la aplicación
+npx expo start
