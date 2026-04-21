@@ -137,6 +137,12 @@ export default function TaskDetailScreen({
           </TouchableOpacity>
         </View>
       </View>
+
+      <View style={styles.footer}>
+        <Text style={styles.footerText}>
+          Ana Lucia Pérez Alvarado 202202625
+        </Text>
+      </View>
     </View>
   );
 }
@@ -243,6 +249,16 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     fontSize: 15,
     fontWeight: 'bold',
+  },
+  footer: {
+    position: 'absolute',
+    bottom: 10,
+    width: '100%',
+    alignItems: 'center',
+  },
+  footerText: {
+    fontSize: 12,
+    color: '#64748b',
   },
   notFound: {
     fontSize: 18,

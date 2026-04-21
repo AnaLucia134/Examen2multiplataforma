@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Text, FlatList, StyleSheet, TouchableOpacity } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
 import TaskCard from '../components/TaskCard';
 
 export default function HomeScreen({
@@ -20,10 +19,7 @@ export default function HomeScreen({
   ).length;
 
   return (
-    <LinearGradient
-      colors={['#0f172a', '#020617']}
-      style={styles.container}
-    >
+    <View style={styles.container}>
       <Text style={styles.title}>Mi TODO LIST</Text>
 
       <Text style={styles.counter}>
@@ -33,7 +29,7 @@ export default function HomeScreen({
       <FlatList
         data={sortedTasks}
         keyExtractor={(item) => item.id}
-        contentContainerStyle={{ paddingBottom: 100 }}
+        contentContainerStyle={{ paddingBottom: 140 }}
         renderItem={({ item }) => (
           <TaskCard
             task={item}
@@ -53,13 +49,21 @@ export default function HomeScreen({
         )}
       />
 
+      {/* Botón flotante */}
       <TouchableOpacity
         style={styles.floatingButton}
         onPress={() => navigation.navigate('AddTask')}
       >
         <Text style={styles.floatingText}>+ Nuevo</Text>
       </TouchableOpacity>
-    </LinearGradient>
+
+      {/* Footer */}
+      <View style={styles.footer}>
+        <Text style={styles.footerText}>
+          Ana Lucia Pérez Alvarado 202202625
+        </Text>
+      </View>
+    </View>
   );
 }
 
@@ -67,6 +71,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
+    backgroundColor: '#0f172a',
   },
   title: {
     fontSize: 28,
@@ -82,7 +87,7 @@ const styles = StyleSheet.create({
   floatingButton: {
     position: 'absolute',
     right: 20,
-    bottom: 30,
+    bottom: 70,
     backgroundColor: '#22c55e',
     paddingVertical: 12,
     paddingHorizontal: 18,
@@ -91,5 +96,15 @@ const styles = StyleSheet.create({
   floatingText: {
     color: '#fff',
     fontWeight: 'bold',
+  },
+  footer: {
+    position: 'absolute',
+    bottom: 10,
+    width: '100%',
+    alignItems: 'center',
+  },
+  footerText: {
+    fontSize: 12,
+    color: '#64748b',
   },
 });
